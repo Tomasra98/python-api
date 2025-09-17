@@ -36,6 +36,9 @@ def get_day_with_name(day_name):
 def post_days():
     return jsonify({"success": True}), 201
 
+@app.route("/hola_mundo", methods=["POST"])
+def hola_mundo():
+    return jsonify("hola mundo"), 201
 
 if __name__ == "__main__":
     app.run(debug=True)
